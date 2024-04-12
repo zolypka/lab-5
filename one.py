@@ -16,3 +16,5 @@ def longestCommonPrefix(words):
 
 
 print(longestCommonPrefix(words))
+
+#O(f(n))= n
