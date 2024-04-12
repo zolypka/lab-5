@@ -8,3 +8,5 @@ def are_anagrams(*words):
     return len(set(normalized_words)) == 1
 
 print(are_anagrams(*input_words))
+
+#O(k * n log n)
