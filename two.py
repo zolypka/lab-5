@@ -12,3 +12,5 @@ def find_missing_number(nums, n):
 
 
 print(find_missing_number(arr, n))
+
+O(N)
