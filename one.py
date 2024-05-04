@@ -1,5 +1,5 @@
-words = list(input("Enter your words separated by space: ").split())
-
+def get_input_words():
+    return list(input("Enter your words separated by space: ").split())
 
 def longestCommonPrefix(words):
     if not words:
@@ -15,6 +15,6 @@ def longestCommonPrefix(words):
     return min_word
 
 
-print(longestCommonPrefix(words))
-
-#O(n)
+if __name__ == "__main__":
+    words = get_input_words()
+    print(longestCommonPrefix(words))

@@ -1,9 +1,11 @@
-user_input = input("Enter a roman number: ")
+def get_roman_input():
+    user_input = input("Enter a roman number: ")
+    return user_input
 
 def roman_to_arabic(s=''):
     roman_dict = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 }
     arabic = 0
-    if s== '' or type(s) != str:  # validtaing whether the user input is correct
+    if s == '' or type(s) != str:
         return 'Invalid Entry'
     else:
         prev_value = 0
@@ -18,6 +20,7 @@ def roman_to_arabic(s=''):
                 return 'Invalid Entry'
         return arabic
 
-print(roman_to_arabic(user_input))
 
-#O(1)
+if __name__ == "__main__":
+    user_input = get_roman_input()
+    print(roman_to_arabic(user_input))

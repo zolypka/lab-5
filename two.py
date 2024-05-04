@@ -1,8 +1,6 @@
-arr = input("Enter the array: ")
-arr = [int(x) for x in arr.split()]
-m = len(arr)
-n = m + 1
-
+def get_input_array():
+    arr_input = input("Enter the array: ")
+    return [int(x) for x in arr_input.split()]
 
 def find_missing_number(nums, n):
     total_sum = (n * (n + 1)) // 2
@@ -11,6 +9,8 @@ def find_missing_number(nums, n):
     return missing_number
 
 
-print(find_missing_number(arr, n))
-
-#O(N)
+if __name__ == "__main__":
+    arr = get_input_array()
+    m = len(arr)
+    n = m + 1
+    print(find_missing_number(arr, n))

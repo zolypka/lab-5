@@ -1,25 +1,19 @@
-from test_one import longestCommonPrefix
-import unittest
+from one import longestCommonPrefix
 
+def test_longestCommonPrefix_empty_list():
+    assert longestCommonPrefix([]) == ""
 
-class TestLongestCommonPrefix(unittest.TestCase):
+def test_longestCommonPrefix_single_word():
+    assert longestCommonPrefix(["apple"]) == "apple"
 
-    def test_longestCommonPrefix(self):
-        # Arrange
-        words1 = ["apple", "app", "apply"]
-        words2 = ["dog", "duck", "dove"]
-        words3 = ["flower", "flour", "flew"]
+def test_longestCommonPrefix_same_words():
+    assert longestCommonPrefix(["hello", "hello", "hello"]) == "hello"
 
-        # Act
-        result1 = longestCommonPrefix(words1)
-        result2 = longestCommonPrefix(words2)
-        result3 = longestCommonPrefix(words3)
+def test_longestCommonPrefix_different_words():
+    assert longestCommonPrefix(["flower", "flight", "floor"]) == "fl"
 
-        # Assert
-        self.assertEqual(result1, "app")
-        self.assertEqual(result2, "d")
-        self.assertEqual(result3, "fl")
+def test_longestCommonPrefix_empty_string():
+    assert longestCommonPrefix(["", "abc", "def"]) == ""
 
-
-if __name__ == '__main__':
-    unittest.main()
+def test_longestCommonPrefix_mixed_case():
+    assert longestCommonPrefix(["python", "pyramid", "pythagoras"]) == "py"
